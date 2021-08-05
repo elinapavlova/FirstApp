@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Пользователи";
+}
+<a asp-action="Create">Добавить сообщение</a>
+<table class="table">
+    <tr><td>Имя</td><td>Фамилия</td><td>Сообщение</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.FirstName</td><td>@item.LastName</td><td>@item.Message</td></tr>
+    }
+</table>
